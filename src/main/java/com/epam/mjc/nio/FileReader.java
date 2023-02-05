@@ -3,8 +3,6 @@ package com.epam.mjc.nio;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.nio.file.Path;
-
 
 public class FileReader {
 
@@ -49,10 +47,5 @@ public class FileReader {
         long phone = Long.parseLong(lines[PHONE_INDEX]);
 
         return new Profile(name, age, email, phone);
-    }
-
-    public static void main(String[] args) {
-        File file = new File("C:\\Users\\TaBletKa97\\IdeaProjects\\stage1-module7-nio-task1\\src\\main\\resources\\Profile.txt");
-        new FileReader().getDataFromFile(file);
     }
 }
